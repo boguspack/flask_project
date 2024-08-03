@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %} Signup {% endblock %}
+{% block content %} 
+<h2 class="text-3xl font-bold items-center mb-6"> Signup </h2>
+<div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
+<form method="POST" class = "flex flex-col space-y-4" >
+{{ form.hidden_tag()}}
+
+<div>
+    {{ form.firstname.label(class="block text-gray-700 text-sm font-semibold mb-2") }}
+    {{ form.firstname(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+</div>
+<div>
+    {{ form.lastname.label(class="block text-gray-700 text-sm font-semibold mb-2") }}
+    {{ form.lastname(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+</div>
+<div>
+    {{ form.email.label(class="block text-gray-700 text-sm font-semibold mb-2") }}
+    {{ form.email(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+</div>
+<div>
+    {{ form.password.label(class="block text-gray-700 text-sm font-semibold mb-2") }}
+    {{ form.password(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+</div>
+<div>
+    {{ form.confirmpassword.label(class="block text-gray-700 text-sm font-semibold mb-2") }}
+    {{ form.confirmpassword(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+</div>
+<div>
+    {{ form.gender.label(class="block text-gray-700 text-sm font-semibold mb-2") }}
+    {{ form.gender(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+</div>
+<div>
+    {{ form.DOB.label(class="block text-gray-700 text-sm font-semibold mb-2") }}
+    {{ form.DOB(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline") }}
+</div>
+<div class="flex items-center justify-center">
+    {{ form.submit(class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline") }}
+</div>
+
+</form>
+</div>
+
+{% endblock %}
+
+
