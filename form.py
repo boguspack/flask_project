@@ -11,3 +11,9 @@ class signupform(FlaskForm):
     gender=SelectField("gender", choices=[  ('male', 'Male'),('female', 'Female')],validators=[DataRequired()])
     DOB=DateField("Date of Birth", format='%Y-%m-%d',validators=[DataRequired()])
     submit=SubmitField("Sign Up")
+
+
+class loginform(FlaskForm):
+    username=StringField("userame",validators=[DataRequired(),length(min=3,max=20)])
+    password=PasswordField("password",validators=[DataRequired()])
+    submit=SubmitField("login")
